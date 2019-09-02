@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%include partials/head%>
+    <title>Shopping Cart</title>
+    <style>
+      .thumbnail {
+        width: 5rem;
+      }
+
+      #quantity {
+        width: 3.5rem;
+      }
+
+      .qty_change {
+        border: solid 1px orange;
+        font-size: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #fdfdfd;">
+    <!-- header -->
+    <%include partials/header%>
+    <main class="section">
+      <div class="container" style="overflow: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">My Cart</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <%var total = 0%> <% for(var i=0 ;i < array.length;i++){ %>
+            <tr>
+              <td>
+                <img
+                  class="thumbnail responsive-img"
+                  src="<%=array[i].item.img%>"
+                />
+              </td>
+              <td><h6><%=array[i].item.name%></h6></td>
+              <td><%=array[i].item.price%></td>
+              <td>
+                <div class="row">
+                  <!-- <div class="input-field">
+                                    
+                                    <a href="" class="qty_change btn-floating transparent grey-text center-align">-</a>
+                                    <input id="quantity" type="number" class="validate">
+                                    <a href="" class="qty_change btn-floating transparent grey-text center-align">+</a>
+                                </div> -->
+                  <pre>  <%=array[i].qty%></pre>
+                </div>
+              </td>
+              <%var price = array[i].item.price%> <%var qty = array[i].qty%>
+              <td><%=price*qty%></td>
+            </tr>
+            <%total = total + price*qty%> <%}%>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2"></td>
+              <td colspan="2">Total</td>
+              <td><%=total%></td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="section">
+          <a
+            href="/checkLogin"
+            class="waves-effect waves-light btn grey darken-1 right"
+            ><i class="material-icons left">lock</i>PLACE ORDER</a
+          >
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer grey lighten-2 grey-text">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6 l3">
+            <h4 class="page-footer__heading">VESTE</h4>
+          </div>
+          <div class="col s12 m6 l3">
+            <h5 class="page-footer__heading">customer care</h5>
+            <ul>
+              <li><a href="" class="grey-text">shipping policy</a></li>
+              <li><a href="" class="grey-text">returns policy</a></li>
+              <li><a href="" class="grey-text">contact us</a></li>
+              <li><a href="" class="grey-text">about us</a></li>
+            </ul>
+          </div>
+          <div class="col s12 m6 l3">
+            <h5 class="page-footer__heading">visit our store</h5>
+            <p>500 Terry Francois Street San Francisco, CA 94158</p>
+          </div>
+          <div class="col s12 m6 l3">
+            <h5 class="page-footer__heading">stay connected</h5>
+            <p>
+              <a href="" class="grey-text"><i class="fab fa-instagram"></i></a>
+              <a href="" class="grey-text"><i class="fab fa-facebook-f"></i></a>
+              <a href="" class="grey-text"><i class="fab fa-twitter"></i></a>
+              <a href="" class="grey-text"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright center-align grey darken-4">
+        <div class="container">© 2023 Copyright</div>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  </body>
+</html>

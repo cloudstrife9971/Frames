@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%include partials/head%>
+    <title>Collection</title>
+    <style>
+      #outer {
+        width: 300px;
+        height:300px;
+        display:inline-block;
+        /* border:1px solid red; */
+        margin-left: 100px;
+        margin-bottom: 50px;
+        margin-top: 50px"
+      }
+      img{
+        max-width:100%;
+        max-height:100%;box-shadow:1px 5px 15px 5px #000000
+      }
+      /* #inner{ */
+        /* width: 200px;
+        height:60px;
+        display:inline-block; */
+        /* border:1px solid red; */
+        /* position:relative;
+        left: 50px;
+        bottom: 20px;
+        background-color: white;
+        box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.42);
+        padding-top: 12px;
+        text-align: center */
+      /* } */
+    </style>
+  </head>
+
+  <body style="background-color: #fdfdfd;">
+    <!-- header -->
+    <%include partials/header%>
+    <h4 style="text-align:center">
+      <pre>
+      Ｉｆ Ｉ ｐａｉｎｔ ｓｏｍｅｔｈｉｎｇ， Ｉ ｄｏｎ’ｔ ｗａｎｔ ｔｏ 
+      ｈａｖｅ ｔｏ ｅｘｐｌａｉｎ ｗｈａｔ ｉｔ ｉｓ．
+       -Ｂｏｂ Ｒｏｓｓ</pre
+      >
+    </h4>
+    <!-- <section>
+      <div class="container">
+        <h4 class="center-align section"><%= gender %></h4>
+        <div class="row">
+          <% for(var i=0 ;i < array.length;i++){ %>
+          <div class="col s12 m4 l3">
+            <div class="card new-arrival">
+              <div class="card-image">
+                <a href="/product-details/<%=array[i]._id%>"
+                  ><img class=" responsive-img " src="<%=array[i].img%>"
+                /></a>
+              </div>
+              <div
+                class="card-content center-align grey lighten-2  grey-text text-darken-3"
+              >
+                <span class="new-arrival__title"> <%=array[i].name%></span>
+                <p class="price"><%= array[i].price %></p>
+              </div>
+            </div>
+          </div>
+          <%}%>
+        </div>
+      </div>
+    </section> -->
+    <!-- <% for(var i=0 ;i < array.length;i++){ %>
+    <a href="/product-details/<%=array[i]._id%>"
+      ><div
+        style="width: 300px;;height:300px;border:20px solid white;display:inline-block;margin-left: 100px;margin-bottom: 50px;box-shadow: 1px 5px 15px 5px #000000;background-image: url('<%=array[i].img%>')"
+      ></div
+    ></a>
+    <%}%>  -->
+    <% for(var i=0 ;i < array.length;i++){ %>
+    <a href="/product-details/<%=array[i]._id%>"
+      ><div id="outer">
+        <img src="<%=array[i].img%>" />
+        <!-- <div id="inner"><%=array[i].name%></div> -->
+      </div></a
+    >
+    <%}%>
+    <!-- footer -->
+    <footer class="page-footer grey lighten-2 grey-text">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6 l3">
+            <h4 class="page-footer__heading">VESTE</h4>
+          </div>
+          <div class="col s12 m6 l3">
+            <h5 class="page-footer__heading">customer care</h5>
+            <ul>
+              <li><a href="" class="grey-text">shipping policy</a></li>
+              <li><a href="" class="grey-text">returns policy</a></li>
+              <li><a href="" class="grey-text">contact us</a></li>
+              <li><a href="" class="grey-text">about us</a></li>
+            </ul>
+          </div>
+          <div class="col s12 m6 l3">
+            <h5 class="page-footer__heading">visit our store</h5>
+            <p>500 Terry Francois Street San Francisco, CA 94158</p>
+          </div>
+          <div class="col s12 m6 l3">
+            <h5 class="page-footer__heading">stay connected</h5>
+            <p>
+              <a href="" class="grey-text"><i class="fab fa-instagram"></i></a>
+              <a href="" class="grey-text"><i class="fab fa-facebook-f"></i></a>
+              <a href="" class="grey-text"><i class="fab fa-twitter"></i></a>
+              <a href="" class="grey-text"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright center-align grey darken-4">
+        <div class="container">© 2023 Copyright</div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".dropdown-trigger").dropdown({ hover: true });
+      });
+    </script>
+  </body>
+</html>

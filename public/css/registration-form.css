@@ -1,0 +1,114 @@
+.sign-up-container {
+  max-width: 400px;
+  margin: auto;
+  border: solid black 1px;
+  padding: 0.5rem;
+}
+
+.sign-up__title {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.sign-up__info-text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form__field {
+  font-size: 1rem;
+  line-height: 2rem;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  border-style: solid;
+  border-color: #999;
+  border-width: 1px 1px 0;
+}
+
+.registration-form__field:last-of-type {
+  border-width: 1px;
+}
+
+.social-sign-in-btn-container {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-sign-in-btn > button {
+  min-width: 150px;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.social-sign-in-btn__facebook > button {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(60, 90, 154);
+  transition: all 0.5s;
+}
+
+.social-sign-in-btn__facebook a {
+  color: rgb(60, 90, 154);
+  text-decoration: none;
+}
+
+.social-sign-in-btn__facebook > button:hover {
+  background-color: rgb(60, 90, 154);
+  border-color: rgb(60, 90, 154);
+  color: #fff;
+  cursor: pointer;
+}
+
+.social-sign-in-btn__facebook > button:hover a {
+  color: #fff;
+}
+
+.social-sign-in-btn__google > button {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(220, 74, 61);
+  transition: all 0.5s;
+}
+
+.social-sign-in-btn__google a {
+  color: rgb(220, 74, 61);
+  text-decoration: none;
+}
+
+.social-sign-in-btn__google > button:hover {
+  background-color: rgb(220, 74, 61);
+  border-color: rgb(220, 74, 61);
+  color: #fff;
+  cursor: pointer;
+}
+
+.social-sign-in-btn__google > button:hover a {
+  color: #fff;
+}
+
+.registration-form__submit {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border: none;
+  color: white;
+  background-color: #222;
+  font-size: 1rem;
+}
+
+.signin__btn {
+}
+
+.center-align {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}

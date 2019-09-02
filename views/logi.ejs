@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/css/registration-form.css" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Import Font Awesome Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css"
+      integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css"
+      integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- header -->
+
+    <main>
+      <section class="sign-up-container">
+        <h3 class="sign-up__title center-align">Login with OpenKart</h3>
+        <ul class="social-sign-in-btn-container">
+          <li class="social-sign-in-btn social-sign-in-btn__facebook">
+            <button>
+              <a href="http://localhost:3000/auth/facebook"
+                ><i class="fab fa-facebook-f left"></i>facebook</a
+              >
+            </button>
+          </li>
+          <li class="social-sign-in-btn social-sign-in-btn__google">
+            <button>
+              <a href="http://localhost:3000/auth/google"
+                ><i class="fab fa-google-plus-g left"></i>google</a
+              >
+            </button>
+          </li>
+        </ul>
+        <form
+          class="registration-form"
+          method="POST"
+          action="http://localhost:3000/login?referer=<%=link%>"
+        >
+          <!-- <label for="email">Your Email Address</label> -->
+          <input
+            class="registration-form__field"
+            placeholder="Your Email Address or Username"
+            type="text"
+            name="username"
+            id="signup-email"
+            required
+          />
+          <!-- <label for="password">Choose Password</label> -->
+          <input
+            class="registration-form__field"
+            placeholder="Choose Password"
+            type="text"
+            name="password"
+            id="signup-password"
+            required
+          />
+          <input
+            class="registration-form__submit"
+            type="submit"
+            value="Login"
+          />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

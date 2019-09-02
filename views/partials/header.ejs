@@ -1,0 +1,37 @@
+<header class="main-header">
+  <nav class="#fafafa grey lighten-5">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo" style="color:salmon">FRAMES</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <!-- <li><a href="#" class="grey-text">home</a></li> -->
+
+        <li>
+          <%if(req.user){%>
+          <a href="/logout?referer=<%=url%>" class="blue-text text-darken-2"
+            >Logout</a
+          >
+          <%}else{%>
+          <a href="/login?referer=<%=url%>" class="blue-text text-darken-2"
+            >Login/Signup</a
+          >
+          <%}%>
+        </li>
+        <li style="color:salmon">
+          <a href="/shopping-cart" class="grey-text"
+            ><i style="color:salmon" class="material-icons">shopping_cart</i></a
+          >
+        </li>
+        <li style="position:relative;right: 15px;color:salmon">
+          <%if(req.session.cart){%> <%=req.session.cart.totalQty%> <%}%>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Dropdown Structure -->
+  <ul id="collection-dropdown" class="dropdown-content grey darken-4">
+    <li><a href="./collection.html" class="grey-text">women</a></li>
+    <li><a href="./collection.html" class="grey-text">men</a></li>
+    <li><a href="./collection.html" class="grey-text">accessories</a></li>
+    <li><a href="./collection.html" class="grey-text">sale</a></li>
+  </ul>
+</header>
